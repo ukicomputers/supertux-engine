@@ -1,0 +1,116 @@
+{
+    "theme": "snow",
+    "bgMusic": "first",
+    "background": "arcticClouds",
+    "startPosition": [50, 736],
+    "elements": [
+        {
+            "type": "tile",
+            "startPosition": [0, 726],
+            "height": 7,
+            "width": 23
+        },
+        {
+            "type": "tile",
+            "startPosition": [1338.5, 678],
+            "height": 8,
+            "width": 3
+        },
+        {
+            "type": "tile",
+            "startPosition": [1534, 726],
+            "height": 7,
+            "width": 5
+        },
+        {
+            "type": "tile",
+            "startPosition": [568, 404],
+            "width": 1,
+            "height": 1
+        },
+        {
+            "type": "coin",
+            "startPosition": [700, 335],
+            "width": 1,
+            "height": 1
+        },
+        {
+            "type": "enemy",
+            "startPosition": [1654, 726],
+            "smart": true,
+            "fix": 1854
+        },
+        {
+            "type": "block",
+            "subtype": "wood",
+            "startPosition": [368, 600]
+        },
+        {
+            "type": "block",
+            "subtype": "blue",
+            "startPosition": [400, 600]
+        },
+        {
+            "type": "block",
+            "subtype": "wood",
+            "startPosition": [432, 600]
+        },
+        {
+            "type": "block",
+            "subtype": "blue",
+            "startPosition": [464, 600]
+        },
+        {
+            "type": "block",
+            "subtype": "wood",
+            "startPosition": [496, 600]
+        },
+        {
+            "type": "block",
+            "subtype": "blue",
+            "startPosition": [528, 600]
+        },
+        {
+            "type": "block",
+            "subtype": "blue",
+            "startPosition": [1028, 600]
+        },
+        {
+            "type": "block",
+            "subtype": "wood",
+            "startPosition": [1060, 600]
+        },
+        {
+            "type": "block",
+            "subtype": "blue",
+            "startPosition": [1092, 600]
+        },
+        {
+            "type": "block",
+            "subtype": "wood",
+            "startPosition": [1124, 600]
+        },
+        {
+            "type": "block",
+            "subtype": "purple",
+            "maxCoins": 8,
+            "startPosition": [1156, 600]
+        },
+        {
+            "type": "coin",
+            "startPosition": [1378.5, 655]
+        },
+        {
+            "type": "coin",
+            "startPosition": [1430.5, 655]
+        },
+        {
+            "type": "coin",
+            "startPosition": [1482.5, 655]
+        },
+        {
+            "type": "coin",
+            "startPosition": [1534.5, 655]
+        }
+    ]
+}
