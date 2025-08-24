@@ -74,9 +74,7 @@ class Block:
             else:
                 sprite = self.sprites["purple"]["empty"]
         
-        size = sprite.get_size()
-        self.rect.width = size[0]
-        self.rect.height = size[1]
+        self.rect.width, self.rect.height = sprite.get_size()
         return sprite
 
     def hit(self, centerX):
@@ -124,21 +122,18 @@ class Block:
             elif self.angle == 0:
                 self.angleAddition = 0
             
-        rotatedSprite = pg.transform.rotate(self._getCurrentSprite(), self.angle)
-        self.rect.width = rotatedSprite.get_width()
-        self.rect.height = rotatedSprite.get_height()
-
-        screen.blit(rotatedSprite, self.rect.topleft)
-        
         self._increaseAnimation()
+        rotatedSprite = pg.transform.rotate(self._getCurrentSprite(), self.angle)
+        self.rect.width, self.rect.height = rotatedSprite.get_size()
+        screen.blit(rotatedSprite, self.rect.topleft)
 
         return {
             "type": "block",
             "rects": {
-                "top": pg.Rect(self.rect.left + 10, self.rect.top, self.rect.width - 10, 1),
-                "left": pg.Rect(self.rect.left, self.rect.top + 10, 1, self.rect.height - 10),
-                "right": pg.Rect(self.rect.right, self.rect.top + 10, 1, self.rect.height - 10),
-                "bottom": pg.Rect(self.rect.left + 10, self.rect.bottom, self.rect.width - 10, 1)
+                "top": pg.Rect(self.rect.left + 5, self.rect.top, self.rect.width - 10, 1),
+                "left": pg.Rect(self.rect.left, self.rect.top + 5, 1, self.rect.height - 10),
+                "right": pg.Rect(self.rect.right, self.rect.top + 5, 1, self.rect.height - 10),
+                "bottom": pg.Rect(self.rect.left + 5, self.rect.bottom, self.rect.width - 10, 1)
             },
             "hit": self.hit
         }

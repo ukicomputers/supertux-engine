@@ -30,14 +30,13 @@
         },
         {
             "type": "coin",
-            "startPosition": [700, 335],
+            "startPosition": [630, 380],
             "width": 1,
             "height": 1
         },
         {
             "type": "enemy",
             "startPosition": [1654, 726],
-            "smart": true,
             "fix": 1854
         },
         {

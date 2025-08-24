@@ -74,8 +74,8 @@ def loadLevel(
         for block in blocks:
             collisionBoxes.append(block.draw(screen))
 
-        for enemy in enemies[:]:
-            if enemy.alpha > 0:
+        for enemy in enemies:
+            if not enemy.finished():
                 collisionBoxes.append(enemy.draw(screen))
             else:
                 enemies.remove(enemy)

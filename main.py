@@ -189,20 +189,18 @@ while running:
                     block["hit"](player.rect.centerx)
                 checkObjectCollision(block["rects"], onBottomCall=hit)
             elif block["type"] == "enemy":
-                if not block["finished"]():
+                if not block["finished"]:
                     for position, box in block["rects"].items():
                         if player.rect.colliderect(box):
                             if position == "top":
                                 block["kill"]()
-
-                                if block["finished"]():
-                                    dy = -jumpSpeed
-                                    jumping = True
+                                dy = -jumpSpeed
+                                jumping = True
                             else:
                                 if player.form == "smallTux":
+                                    dy = -deadSpeed
                                     gameEnded = True
                                 else:
-                                    dy = -jumpSpeed
                                     player.changeForm("smallTux")
         
         if not gameEnded:
